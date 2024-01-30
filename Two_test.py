@@ -189,7 +189,7 @@ def take_test_aviable(take_test_ID):
 
     cur.execute("SELECT * FROM tests WHERE IDtests = ?", (test_ID,))
     result = cur.fetchone()
-    con.commit()
+    #con.commit()
 
     if result:
         return True
@@ -252,7 +252,7 @@ def record_col_cor_answere(right_answer, ID_test, user_name, check_question_numb
 
 def check_res_tests_us(IDtests):
     import sqlite3
-    connection = sqlite3.connect('r_answ.db')  # Здесь нужно указать путь к базе данных SQLite3
+    connection = sqlite3.connect('r_answ.db')
     cursor = connection.cursor()
     cursor.execute("SELECT usser_name, right_answer, col_question FROM r_answ WHERE IDtests = ?", (IDtests,))
     results = cursor.fetchall()

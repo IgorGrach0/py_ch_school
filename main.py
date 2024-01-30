@@ -497,9 +497,10 @@ def test_available():
                     test_record = 12
                     main_window()
 
-
             else:
-                print('строка содержит символы')
+                print('такого теста не существует')
+        else:
+            print('строка содержит символы')
 
     global go_tests_entry
     global available_w
